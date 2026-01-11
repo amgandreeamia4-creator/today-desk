@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Today Desk – one clear plan for today",
   description:
     "Today Desk helps you paste today's tasks and calendar, see your free time, and build a realistic plan for the day.",
+  other: {
+    "google-adsense-account": "ca-pub-6846589122417205",
+  },
 };
 
 export default function RootLayout({

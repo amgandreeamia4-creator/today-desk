@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 
 type TaskContext = "deep" | "admin" | "calls" | "errands" | "other";
 type DayType = "workday" | "admin" | "creative" | "light";
@@ -1322,6 +1323,10 @@ export default function TodayDeskPage() {
         <footer className="mt-6 border-t border-emerald-200 pt-3 text-center text-[11px] text-emerald-700">
           Today Desk — a tiny front panel for your day. Starred tasks trigger
           gentle reminders (while this tab is open).
+          {" · "}
+          <Link href="/privacy" className="underline">
+            Privacy & cookies
+          </Link>
         </footer>
       </div>
     </main>
