@@ -21,8 +21,16 @@ export default function PrivacyPage() {
           You can manage your ad settings in your Google account.
         </p>
         <p className="mb-2">
-          If you have questions about this page, you can contact me using the
-          details on my GitHub profile.
+          If you have questions about this page, you can contact me via my{" "}
+          <a
+            href="https://github.com/amgandreeamia4-creator"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            GitHub profile
+          </a>
+          .
         </p>
         <p className="mt-4 text-xs text-emerald-700">
           Back to{" "}
