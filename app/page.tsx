@@ -295,6 +295,17 @@ export default function TodayDeskPage() {
   const [emailTo, setEmailTo] = useState("");
   const reminderTimersRef = useRef<number[]>([]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    try {
+      // @ts-ignore
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      // ignore if AdSense is not ready yet
+    }
+  }, []);
+
   // Derived values
   const freeSlots = useMemo(
     () => computeFreeSlots(events, workStartMinutes, workEndMinutes),
@@ -1287,11 +1298,20 @@ export default function TodayDeskPage() {
 
               <div className="rounded-lg border border-dashed border-emerald-400 bg-white/80 p-3 text-[11px]">
                 <p className="mb-1 font-medium text-emerald-900">
-                  Implementation note
+                  Ad placeholder
                 </p>
-                <p className="text-[11px] text-emerald-800">
-                  You can use this container to host a 300×250 or 336×280 ad unit.
-                  Keep the surrounding copy minimal so the ad itself stands out.
+                <div className="flex justify-center">
+                  <ins
+                    className="adsbygoogle"
+                    style={{ display: "block" }}
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+                    data-ad-slot="1234567890"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"
+                  />
+                </div>
+                <p className="mt-2 text-[10px] text-emerald-700">
+                  When your AdSense account is approved, replace the client and slot IDs above with the values from your AdSense code.
                 </p>
               </div>
             </div>
