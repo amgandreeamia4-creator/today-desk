@@ -39,6 +39,21 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6846589122417205"
           crossOrigin="anonymous"
         />
+        <Script
+          id="ga4-loader"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-H0WCC2CFCM"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H0WCC2CFCM', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {children}
       </body>
     </html>
