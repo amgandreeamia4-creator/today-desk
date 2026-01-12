@@ -667,9 +667,7 @@ export default function TodayDeskPage() {
             Today Desk – one clear plan for your day
           </h1>
           <p className="mt-3 text-sm text-slate-700 max-w-2xl mx-auto">
-            Today Desk is a simple daily planner that helps you turn your to-do list and calendar
-            into one realistic day plan. Paste your tasks and events, see your free time, and
-            build a schedule that actually fits – no login, no integrations, all in your browser.
+            Today Desk is a tiny, calm planner for one day at a time. Paste today's tasks and calendar, see your free time, and build a schedule you can actually follow – no login, no accounts, all in your browser.
           </p>
         </header>
 
@@ -1374,6 +1372,9 @@ export default function TodayDeskPage() {
 
         {/* SEO Content */}
         <section className="mt-12 border-t border-emerald-100 pt-8">
+          <p className="text-sm text-slate-600 mb-4">
+            Below is a quick tour of how Today Desk works and what happens to your data.
+          </p>
           <h2 className="text-lg font-semibold text-emerald-900 mb-4">
             How Today Desk works
           </h2>
